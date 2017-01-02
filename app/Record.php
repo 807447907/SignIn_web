@@ -24,4 +24,9 @@ class Record extends Model
         return $this->belongsTo('App\SignIn');
     }
 
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
 }

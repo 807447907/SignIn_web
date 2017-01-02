@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">学生注册</div>
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/teacher/register') }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/student/register') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('user_id') ? ' has-error' : '' }}">

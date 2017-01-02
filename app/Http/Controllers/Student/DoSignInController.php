@@ -32,8 +32,9 @@ class DoSignInController extends Controller
             foreach (Bluetooth::where(['address' => $address])->get() as $bluetooth) {
                 foreach ($bluetooth->sign_ins as $sign_in) {
                     $items[$sign_in->sign_in_id] = $sign_in->makeHidden(
-                        ['sign_in_id', 'course_id', 'pivot', 'state']
-                    )->toArray();
+                            ['sign_in_id', 'course_id', 'pivot', 'state']
+                        )->toArray()
+                        + ['course_name' => $sign_in->course->name];
                 }
             }
         }
@@ -41,6 +42,7 @@ class DoSignInController extends Controller
         foreach ($items as $key => $value) {
             $res[] = [
                 'sign_in_id' => $key,
+                'course_name' => $value['course_name'],
                 'name' => $value['name'],
                 'description' => $value['description'],
                 'updated_at' => $value['updated_at'],

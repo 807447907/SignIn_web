@@ -13,22 +13,38 @@ class SignInTableSeeder extends Seeder
     {
         App\SignIn::create([
             'course_id' => 1,
-            'name' => '1st',
+            'name' => '第一次签到',
             'description' => '',
         ]);
         App\SignIn::create([
             'course_id' => 1,
-            'name' => '2nd',
+            'name' => '第二次签到',
             'description' => '',
         ]);
         App\SignIn::create([
             'course_id' => 1,
-            'name' => '3rd',
+            'name' => '第三次签到',
+            'description' => '',
+        ]);
+
+        App\SignIn::create([
+            'course_id' => 4,
+            'name' => '第一次签到',
             'description' => '',
         ]);
         App\SignIn::create([
-            'course_id' => 1,
-            'name' => '4th',
+            'course_id' => 4,
+            'name' => '第二次签到',
+            'description' => '',
+        ]);
+        App\SignIn::create([
+            'course_id' => 4,
+            'name' => '第三次签到',
+            'description' => '',
+        ]);
+        App\SignIn::create([
+            'course_id' => 4,
+            'name' => '第四次签到',
             'description' => '',
         ]);
     }

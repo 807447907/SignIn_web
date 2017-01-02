@@ -20,6 +20,7 @@ Route::group(['middleware' => 'teacherToken'], function () {//user_id token
     Route::any('/teacher/course/create', 'Teacher\CourseController@create');//name description=null
     Route::any('/teacher/course', 'Teacher\CourseController@show');
     Route::any('/teacher/course/{course_id}', 'Teacher\CourseController@show');
+    Route::any('/teacher/course/{course_id}/export', 'Teacher\CourseController@export');
     Route::any('/teacher/course/{course_id}/delete', 'Teacher\CourseController@delete');
 
 
